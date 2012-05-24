@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Private zone. Only for administrator!"
+AuthUserFile  /home/s/umihelpru/test/public_html/.htpasswd
+require valid-user
