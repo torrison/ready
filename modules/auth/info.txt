@@ -1,0 +1,1 @@
+$GLOBALS['view_auth_login'] - Login Form

@@ -1,0 +1,41 @@
+<?php
+#DB_SYSTEM VARS
+
+  	    $column_in_table[0]['name'] = "id";
+  	    $column_in_table[0]['intable'] = true;
+        $n = 1;
+  	    $column_in_table[$n]['name'] = "cookie";
+   	    $column_in_table[$n]['input_type'] = "text";
+  	    $column_in_table[$n]['fullname'] = "Cookie";
+		$column_in_table[$n]['intable'] = true;
+		$defend_post['cookie'] = C7_defend_post_fast ("cookie");
+        $n++;
+  	    $column_in_table[$n]['name'] = "ip";
+   	    $column_in_table[$n]['input_type'] = "text";
+  	    $column_in_table[$n]['fullname'] = "IP";
+		$column_in_table[$n]['intable'] = false;
+        $defend_post['ip'] = C7_defend_post_fast ("ip");
+        $n++;
+  	    $column_in_table[$n]['name'] = "user_id";
+   	    $column_in_table[$n]['input_type'] = "text";
+  	    $column_in_table[$n]['fullname'] = "User_ID";
+		$column_in_table[$n]['intable'] = false;
+        $defend_post['user_id'] = C7_defend_post_fast ("user_id");
+        $n++;
+  	    $column_in_table[$n]['name'] = "manager_id";
+   	    $column_in_table[$n]['input_type'] = "text";
+  	    $column_in_table[$n]['fullname'] = "Manager ID";
+		$column_in_table[$n]['intable'] = false;
+        $defend_post['manager_id'] = C7_defend_post_fast ("manager_id");
+        $n++;
+  	    $column_in_table[$n]['name'] = "about";
+   	    $column_in_table[$n]['input_type'] = "textarea";
+  	    $column_in_table[$n]['fullname'] = "Информация";
+		$column_in_table[$n]['intable'] = false;
+        $defend_post['about'] = C7_defend_post_fast ("about");
+        $n++;
+  	    $column_in_table[$n]['name'] = "last_time";
+   	    $column_in_table[$n]['input_type'] = "textarea";
+  	    $column_in_table[$n]['fullname'] = "Last Enter Time";
+		$column_in_table[$n]['intable'] = false;
+        $defend_post['last_time'] = C7_defend_post_fast ("last_time");

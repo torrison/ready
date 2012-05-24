@@ -1,0 +1,81 @@
+<?php
+
+
+
+	define('ACCESS', true);
+	define('EXT', '.php');
+	define('DS', DIRECTORY_SEPARATOR);
+	define('ROOT_PATH', dirname(__FILE__).DS);
+	define('INCLUDE_PATH', ROOT_PATH.'includes'.DS);
+	define('TASKS_PATH', INCLUDE_PATH.'tasks'.DS);
+	define('CONF_PATH', ROOT_PATH);
+	define('PAGES_PATH', ROOT_PATH.'pages'.DS);
+	define('SCRIPT_PATH', ROOT_PATH.'js'.DS);
+	define('LANG_PATH', ROOT_PATH.'lang'.DS);
+
+	//инициализация бефера вывода
+	ob_start();
+	ob_implicit_flush(0);
+
+	require_once(INCLUDE_PATH.'Manager.php');
+	$manager = new Manager;
+
+	//загружаем настройки
+	require_once(CONF_PATH.'config'.EXT);
+	Manager::$conf = $conf;
+	unset($conf);
+
+	//получаем абсолютный путь к папке с фалами
+	Manager::$conf[(string) trim('filesystem.files_abs_path')] = realpath(Manager::$conf[(string) ('filesystem.files_path')]);
+
+	//загрузка менеджера обработки ошибок
+	require_once(INCLUDE_PATH.'ErrorManager'.EXT);
+	Manager::$error_m = new ErrorManager;
+
+	//загрузка менеджера сессий
+	require_once(INCLUDE_PATH.'SessionManager'.EXT);
+	Manager::$sess_m = new SessionManager;
+
+	//проверка авторизации
+	if (!Manager::$sess_m->authorisation()) die();
+
+	//загружаем менеджер изображений
+	require_once(INCLUDE_PATH.'ImageManager'.EXT);
+	Manager::$image_m = new ImageManager;
+
+	//загружаем менеджер файловой системы
+	require_once(INCLUDE_PATH.'FileManager'.EXT);
+	Manager::$file_m = new FileManager;
+
+	$task = isset($_REQUEST['task']) ? $_REQUEST['task'] : 'page';
+	$manager->peform($task);
+
+	//получение и очистка буфера вывода
+	$buffer = ob_get_contents();
+	ob_end_clean();
+
+	//определяем нужно ли сжимать
+	if (Manager::$conf['stream.use_gzip']) {
+		//определяем метод сжатия
+		if (strpos((string) $_SERVER['HTTP_ACCEPT_ENCODING'], 'x-gzip') !== false) {
+			$encoding = 'x-gzip';
+		} elseif (strpos((string) $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== false) {
+			$encoding = 'gzip';
+		} elseif (strpos((string) $_SERVER['HTTP_ACCEPT_ENCODING'], 'deflate') !== false) {
+			$encoding = 'deflate';
+		}
+		//производим сжатие данных
+		if (isset($encoding)){
+			header('Content-Encoding: '.(string) $encoding);
+			$buffer = ($encoding == 'gzip' || $encoding == 'x-gzip')
+				? gzencode($buffer, Manager::$conf[(string) trim('stream.compression_level')])
+				: gzdeflate($buffer,  Manager::$conf[(string) trim('stream.compression_level')]);
+			}
+	}
+	//выводим буфер
+	echo $buffer;
+
+
+
+?>
+

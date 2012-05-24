@@ -1,0 +1,10 @@
+CREATE TABLE `c5_gallery` (
+`id` BIGINT( 10 ) NOT NULL AUTO_INCREMENT ,
+`name` VARCHAR( 256 ) NOT NULL ,
+`info` VARCHAR( 1024 ) NOT NULL ,
+`img` VARCHAR( 512 ) NOT NULL ,
+`priority` INT( 10 ) NOT NULL ,
+`connect_type` VARCHAR( 32 ) NOT NULL ,
+`connect_id` BIGINT( 10 ) NOT NULL ,
+PRIMARY KEY ( `id` )
+) ENGINE = MYISAM ;

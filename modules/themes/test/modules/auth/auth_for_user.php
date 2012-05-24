@@ -1,0 +1,1 @@
+Привет, Пользователь!<br /> <a href="<?php echo $_GET['url_line'];?>?auth_logout=1">Выйти из системы</a>

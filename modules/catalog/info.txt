@@ -1,0 +1,1 @@
+$GLOBALS['c7_catalog_menu'] - Left Catalog Menu

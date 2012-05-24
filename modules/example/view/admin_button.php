@@ -1,0 +1,1 @@
+<a href="admin/example/example_table">Пример</a><br />

@@ -1,0 +1,1 @@
+<a href="/admin/catalog/catalog">Каталог</a><br />

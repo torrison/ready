@@ -1,0 +1,1 @@
+<br /><br />[ <a target="_blank" href="admin/catalog/catalog/edit/<?php echo $input_data['view_page_id'];?>">Edit This Page</a> ]

@@ -1,0 +1,190 @@
+/*MAIN STYLES*/
+html, body {height:100%;}
+body {
+	font-family:"Tahoma", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#656565;
+	background-color: #ddd;
+	background-image: url(images/top-light.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+
+}
+a, h2, h3, h4 {color:#2786EC;}
+a.blue {color:#2786EC;}
+h1, h3, h4 {font-size: 14px;font-weight:normal;}
+h2 {font-size: 24px;}
+
+input[type=text],input[type=password] {height:14px;}
+input,textarea {
+	background: #fff;
+	padding: 4px 5px 5px;
+	border: 1px solid #cacaca;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;}
+img {	/*
+	border: 1px solid #d7d8fa;
+	*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+}
+input:focus, textarea:focus {
+	border-color: #2786EC;
+	-moz-box-shadow: 0px 0px 4px #2786EC;
+	-webkit-box-shadow: 0px 0px 4px #2786EC;
+	box-shadow: 0px 0px 4px #2786EC;
+}
+
+
+/*MAKET STYLES*/
+#container {
+	margin-bottom: -150px;
+	min-height:100%;
+}
+
+#wrapper {
+	margin:auto;
+	padding: 10px 0 150px;
+	width: 980px;
+	overflow:hidden;
+}
+
+#header {
+	height:140px;
+}
+
+#top-slogan, #footer-links {
+	padding-top:10px;
+	height:25px;
+	text-align:center;
+	color:#39f;
+	background-color:#f7f7f7;
+	opacity: 0.45;
+	-moz-opacity: 0.55;
+	-khtml-opacity: 0.55;
+	overflow:hidden;
+}
+
+/* Top Divs */
+#logo, #contacts, #header-contact {
+	float:left;
+	height:100px;
+}
+
+#logo {
+	padding-top:40px;
+	width:210px;
+	background-image:url(images/logo_new.png);
+	background-repeat: no-repeat;
+	background-position:center center;
+}
+#contacts {width:460px;padding:20px;}
+#header-contact {font-style:italic;text-align:right;padding-top:20px;}
+
+/* SideBar */
+
+#sidebar {
+	float:left;
+	width:210px;
+	margin-right:20px;
+}
+#sidebar a {
+	font-size:16px;
+	color:#2786EC;
+	text-decoration:none;
+}
+
+#tree_menu a {font-size:14px;}
+
+/* Content Div */
+
+#content-div {
+	float:left;
+	width:730px;
+	line-height: 1.2em;
+	padding:0px 0px 10px 10px;
+	overflow:hidden;
+}
+
+/* One of Third */
+
+.one-third {
+	margin: 0 10px 10px 0;
+	width:233px;
+	float:left;
+	overflow:hidden;
+	text-align:center;
+}
+
+.one-third h2, .full-width h2 { font-size:16px;margin-bottom:5px;}
+
+.one-third a img:hover{	border-color: #2786EC;
+	-moz-box-shadow: 0px 0px 4px #2786EC;
+	-webkit-box-shadow: 0px 0px 4px #2786EC;
+	box-shadow: 0px 0px 4px #2786EC;}
+
+.one-third a {
+	display:inline-block;
+	padding: 4px 0 4px;
+	text-decoration:none;
+}
+
+/* Full Width Text */
+
+.full-width {
+	clear:both;
+	text-align:justify;
+}
+.full-width p {padding-top:20px;}
+.full-width img {
+	float:left;
+	margin: 0 20px 20px 0;
+}
+
+/* Footer */
+
+footer {
+	height:105px;
+	padding: 45px 0 0;
+}
+#footer-links a {color:#2786EC;}
+#footer-article, #footer-copyright {
+	margin:auto;
+	width: 980px;
+	font-size:13px;
+	line-height: 1.2em;
+	color:#11A20A;
+	text-align:center;
+}
+#footer-article {
+	padding: 5px 0 5px;
+	height: 45px;
+	overflow:hidden;
+	color:#2786EC;
+}
+#footer-copyright {color:#39f;}
+
+/*------------------ Socia Buttons ------------------------*/
+
+/*horizontal*/
+#social-big-horizontal div {
+	float:left;
+	background:url(images/social.png) no-repeat;
+	display:block;
+}
+/*big-horizontal*/
+#social-big-horizontal {width:240px;overflow:hidden;}
+#social-big-horizontal a {display:block;}
+#social-big-horizontal div, #social-big-horizontal a {
+	width:48px;
+	height:48px;
+}
+#social-big-horizontal .vkontakte {background-position: 8px 9px;}
+#social-big-horizontal .f-book {background-position: 8px -39px;}
+#social-big-horizontal .twitter {background-position: 8px -87px;}
+#social-big-horizontal .y-tube {background-position: 8px -183px;}
+#social-big-horizontal .skype {background-position: 8px -135px;}
+

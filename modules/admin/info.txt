@@ -1,0 +1,3 @@
+$GLOBALS['admin_div'] - Main part of Admin Panel
+
+$GLOBALS['admin_buttons'] - Admin buttons in admin menu
