@@ -1,6 +1,6 @@
 <?php
 
-// Git Here =)
+// Where the ideas ??? =)
 
 // Session system
 

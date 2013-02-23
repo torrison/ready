@@ -14,7 +14,7 @@ if ($GLOBALS['debug_mode'] == true) echo "Include Config File<br />Define data f
  $GLOBALS['theme'] = "test";
 
  // Default SEO Data
- $GLOBALS['seo_title'] = "Complex 7 - Logic Structure and Simple Modules System";
+ $GLOBALS['seo_title'] = "Ou! 7 - Logic Structure and Simple Modules System";
  $GLOBALS['seo_h1'] = "Complex 7 - Best Site Platform for today.";
  $GLOBALS['seo_description'] = "Complex 7 - This system must change the world";
  $GLOBALS['seo_keywords'] = "Complex 7, cms, framework, site system, web site";
