@@ -3,6 +3,8 @@
 // Git Here =)
 
 // Session system
+
+
 session_start();
 // Debug mode switch
 $GLOBALS['debug_mode'] = false;
