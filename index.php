@@ -1,4 +1,7 @@
 <?php
+
+// Git Here =)
+
 // Session system
 session_start();
 // Debug mode switch
@@ -15,7 +18,8 @@ require ("libs/c7_file_system.php");                             			 	// FileSys
 require ("libs/c7_url.php");                             			 			// URL works
 require ("libs/c7_get_view.php");                                               // Lib for include the view parts
 
-// Access systemrequire ("modules/auth/c7_auth_controller.php");
+// Access system
+require ("modules/auth/c7_auth_controller.php");
 
 // Lead Maker
 require ("modules/leadmaker/c7_leadmaker_controller.php");
